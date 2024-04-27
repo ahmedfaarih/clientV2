@@ -1,0 +1,368 @@
+body * {
+  font-family: Verdana;
+}
+
+#about-us {
+  background-color: #26486b;
+  color: white;
+}
+
+.sections {
+  padding: 20px;
+  padding-bottom: 90px;
+}
+
+.section-title {
+  padding-top: 80px;
+  padding-bottom: 35px;
+}
+
+#navLogo {
+  height: 47px;
+}
+
+.icon {
+  height: 70px;
+  margin: 17px;
+}
+
+#bots {
+  background-color: #26486b;
+  color: white;
+  padding-bottom: 70px;
+}
+
+.bot-icon {
+  height: 156px;
+  margin-top: 40px;
+  transition: all .3s ease-in-out;
+}
+
+.bot-icon:hover, .bot-icon:focus {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+.bot-title {
+  margin-top: 20px;
+}
+
+.blue-texts {
+  color: #26486b;
+}
+
+.button {
+  border: 2px solid #26486b;
+  border-radius: 16px;
+  background-color: transparent;
+  color: #26486b;
+  margin-top: 15px;
+}
+
+.button:hover, .button:focus {
+  background-color: #26486b;
+  color: white;
+}
+
+#podcasts {
+  color: #26486b;
+}
+
+.podcast-video {
+  padding-top: 20px;
+  width: 350px;
+  height: 197px;
+}
+
+#footer {
+  background-color: #26486b;
+  color: white;
+}
+
+#footer-logo {
+  height: 60px;
+  margin-bottom: 28PX;
+}
+
+.footer-links {
+  margin: 60px 0px 25px 0px;
+}
+
+.footer-links a {
+  color: white;
+}
+
+.social-icons {
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+.social-icons i {
+  font-size: 21px;
+  color: white;
+  width: 38px;
+  text-align: center;
+}
+
+.disclaimer-link {
+  color: white;
+}
+
+.disclaimer-link:hover, .disclaimer-link:focus {
+  color: white;
+}
+
+.info-icon {
+  font-size: 25px;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px;
+  margin: 10px 15px 10px 0;
+}
+
+.contact-box {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.contact-btn {
+  border: 2px solid #fff;
+  border-radius: 16px;
+  background-color: transparent;
+  color: white;
+}
+
+.contact-btn:hover, .contact-btn:focus {
+  background-color: #fff;
+  color: #26486b;
+}
+
+.contact-border {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer-sections {
+  margin-top: 25px;
+}
+
+.contact-details {
+  /*margin-top: 88px;*/
+}
+
+@media (min-width: 768px) {
+  .contact-details {
+    margin-top: 88px;
+  }
+}
+
+.footer-rights {
+  background-color: #343a40;
+  width: 100%;
+  padding-top: 17px;
+}
+
+.partner-title {
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.partner-para {
+}
+
+@media (min-width: 768px) {
+  .partner-para {
+    padding-left: 20px;
+  }
+}
+
+.partner-row {
+  margin-top: 40px;
+}
+
+.areas {
+  padding: 20px;
+}
+
+.areas-icons {
+  height: 80px;
+  margin-bottom: 26px;
+}
+
+.area-title {
+  font-weight: bold;
+}
+
+.bot-icons {
+  height: 130px;
+  margin-bottom: 25px;
+  transition: all .3s ease-in-out;
+}
+
+.bot-icons:hover, .bot-icons:focus {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+.logo-main {
+  padding: 30px;
+  width: 200px;
+}
+
+@media (min-width: 300px) {
+  .intro-video {
+    width: 350px;
+    height: 210px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .intro-video {
+    width: 442px;
+    height: 256px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-video {
+    width: 512px;
+    height: 297px;
+    padding: 10px;
+  }
+}
+
+#login {
+  height: 100vh;
+  background-color: #26486b;
+}
+
+#login-box {
+  height: 34rem;
+  width: 30rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 16px 17px 19px -17px;
+  margin: 30px;
+}
+
+#login-box {
+  padding: 50px 30px 35px 30px;
+}
+
+@media (min-width: 300px) {
+  #login-box {
+    padding: 55px;
+  }
+}
+
+#login-logo {
+  height: 80px;
+  margin-top: 5px;
+}
+
+#login-title {
+  margin-top: 25px;
+  color: initial;
+}
+
+.btn.login-btn {
+  background-color: #26486b;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+  height: 54px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: #609fe8;
+  line-height: 45px;
+  border-radius: 100px !important;
+}
+
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: #fff;
+}
+
+.scroll-to-top:hover {
+  background: #4e8ad0;
+}
+
+#blog-icon {
+  padding-left: 25px;
+}
+
+.recent-main-title {
+  margin-top: 70px;
+}
+
+.row.recent-blogs {
+  padding-top: 34px;
+}
+
+.published-date {
+  font-size: 12px;
+}
+
+.published-date i {
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.recent-blogs-title {
+  margin-top: 17px;
+}
+
+.overlay-white {
+  z-index: 1110;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hide {
+  display: none!important;
+}
+
+.fab.fa-twitter:hover {
+  color: #00acee;
+}
+
+.fab.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fab.fa-instagram:hover {
+  color: #e1306c;
+}
+
+.fab.fa-youtube:hover {
+  color: #ff0000;
+}
+
+.fab.fa-linkedin-in:hover {
+  color: #0077b5;
+}
+
+.fab.fa-spotify:hover {
+  color: #1ed761;
+}
+
