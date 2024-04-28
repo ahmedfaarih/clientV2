@@ -10,6 +10,7 @@ use Filament\Widgets\TableWidget as BaseWidget;
 use Illuminate\Database\Eloquent\Model;
 use App\Filament\Resources\CustomerResource\Pages;
 use App\Filament\Resources\DocumentRequestResource\Pages\EditDocumentRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CaseUpdates extends BaseWidget
 {
@@ -50,5 +51,11 @@ class CaseUpdates extends BaseWidget
             ]);
             
 
+    }
+
+    public static function canView(): bool
+    {
+        $user = Auth::user();
+        return $user && $user->hasRole('user');
     }
 }

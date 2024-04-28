@@ -11,6 +11,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class PendingDocumentRequests extends BaseWidget
 {
@@ -53,5 +54,11 @@ class PendingDocumentRequests extends BaseWidget
                 ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->recordUrl(fn (Model $record): string => UploadDocumentRequest::getUrl([$record->id]));
+    }
+
+    public static function canView(): bool
+    {
+        $user = Auth::user();
+        return $user && $user->hasRole('user');
     }
 }
