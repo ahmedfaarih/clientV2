@@ -15,6 +15,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class DocumentRequestResource extends Resource
 {
@@ -57,6 +58,11 @@ class DocumentRequestResource extends Resource
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),      
             ])
+            ->modifyQueryUsing(function (Builder $query) { 
+                if (auth()->user()->hasRole('user')) { 
+                    return $query->where('user_id', auth()->id()); 
+                } 
+            }) 
             ->filters([
                 //
             ])

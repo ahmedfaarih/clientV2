@@ -55,8 +55,10 @@ class User extends Authenticatable
         return $this->hasOne(ClientCase::class);
     }
 
-    public function isAdmin() {
-
-        return $this->hasRole('test'); 
+    protected static function booted(): void
+    {
+        static::creating(function (User $user) {
+            $user->assignRole('user');
+        });
     }
 }
