@@ -13,7 +13,6 @@ class DocumentRequestPolicy
      */
     public function viewAny(User $user): bool
     {
-        // dd($user->getRoleNames());
         return $user->checkPermissionTo('view-any DocumentRequest');
     }
 

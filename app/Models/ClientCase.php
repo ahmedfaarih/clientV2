@@ -19,4 +19,8 @@ class ClientCase extends Model implements HasMedia
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function caseUpdates() {
+        return $this->hasMany(CaseUpdate::class);
+    }
 }

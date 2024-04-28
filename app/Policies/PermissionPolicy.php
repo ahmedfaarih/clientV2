@@ -2,9 +2,9 @@
 
 namespace App\Policies;
 
+use Illuminate\Auth\Access\Response;
 use App\Models\Permission;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class PermissionPolicy
 {
@@ -13,8 +13,7 @@ class PermissionPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->hasRole(['Super Admin']);
-        
+        return $user->checkPermissionTo('view-any Permission');
     }
 
     /**
@@ -22,8 +21,7 @@ class PermissionPolicy
      */
     public function view(User $user, Permission $permission): bool
     {
-        return $user->hasRole(['Super Admin']);
-        
+        return $user->checkPermissionTo('view Permission');
     }
 
     /**
@@ -31,8 +29,7 @@ class PermissionPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole(['Super Admin']);
-        
+        return $user->checkPermissionTo('create Permission');
     }
 
     /**
@@ -40,8 +37,7 @@ class PermissionPolicy
      */
     public function update(User $user, Permission $permission): bool
     {
-        return $user->hasRole(['Super Admin']);
-    
+        return $user->checkPermissionTo('update Permission');
     }
 
     /**
@@ -49,8 +45,7 @@ class PermissionPolicy
      */
     public function delete(User $user, Permission $permission): bool
     {
-        return $user->hasRole(['Super Admin']);
-        
+        return $user->checkPermissionTo('delete Permission');
     }
 
     /**
@@ -58,8 +53,7 @@ class PermissionPolicy
      */
     public function restore(User $user, Permission $permission): bool
     {
-        return $user->hasRole(['Super Admin']);
-        
+        return $user->checkPermissionTo('restore Permission');
     }
 
     /**
@@ -67,7 +61,6 @@ class PermissionPolicy
      */
     public function forceDelete(User $user, Permission $permission): bool
     {
-        return $user->hasRole(['Super Admin']);
-        
+        return $user->checkPermissionTo('force-delete Permission');
     }
 }

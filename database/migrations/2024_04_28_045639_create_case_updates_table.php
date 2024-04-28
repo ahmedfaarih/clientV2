@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('document_requests', function (Blueprint $table) {
+        Schema::create('case_updates', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->string('detail');
-            $table->string('status')->default('pending');
+            $table->foreignId('client_case_id')->constrained();
+            $table->text('case_update');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('document_requests');
+        Schema::dropIfExists('case_updates');
     }
 };
