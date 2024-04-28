@@ -83,6 +83,7 @@ class DocumentRequestResource extends Resource
             'index' => Pages\ListDocumentRequests::route('/'),
             'create' => Pages\CreateDocumentRequest::route('/create'),
             'edit' => Pages\EditDocumentRequest::route('/{record}/edit'),
+            'upload' => Pages\UploadDocumentRequest::route('/{record}/upload'),
         ];
     }
 }

@@ -63,4 +63,11 @@ class DocumentRequestPolicy
     {
         return $user->checkPermissionTo('force-delete DocumentRequest');
     }
+
+    public function canUploadDocuments(User $user, DocumentRequest $documentrequest): bool
+    {
+        return true;
+    }
+
+    
 }
