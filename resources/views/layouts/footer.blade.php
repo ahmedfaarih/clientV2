@@ -4,7 +4,14 @@
         <div class="row contact-border">
             <div class="col footer-sections"><img class="img-fluid" id="footer-logo" src="assets/img/logoWhite.png">
                 <h6>MUNAWWAR, NAZAHATH &amp; CO. LLP</h6>
-                <p class="footer-links"><a href="index.html">Home</a>&nbsp;<br><a href="partners.html">Partners</a><br><a href="areas.html">Practice Areas</a><br><a href="values.html">Our Core Values </a><br><a href="bots.html">Legal Bots</a><br><a href="">The Start-up Lawyers</a><br><a href="publications.html">Publications</a><br><a href="clientio.html">Clientio</a></p>
+                <p class="footer-links"><a href="{{route('home')}}">Home</a>&nbsp;<br>
+                <a href="{{route('partners')}}">Partners</a><br>
+                <a href="{{route('areas')}}">Practice Areas</a><br>
+                <a href="{{route('values')}}">Our Core Values </a><br>
+                <a href="{{route('bots')}}">Legal Bots</a>
+                <br><a href="">The Start-up Lawyers</a>
+                <br><a href="{{route('publications')}}">Publications</a><br>
+                <a href="{{'admin'}}">Clientio</a></p>
             </div>
             <div class="col-12 col-md-4 footer-sections">
                 <div class="contact-details">

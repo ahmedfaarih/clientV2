@@ -91,6 +91,7 @@ body * {
 
 .footer-links a {
   color: white;
+  text-decoration: none;
 }
 
 .social-icons {
@@ -365,4 +366,5 @@ body * {
 .fab.fa-spotify:hover {
   color: #1ed761;
 }
+
 

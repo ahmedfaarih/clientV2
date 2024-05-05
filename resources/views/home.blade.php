@@ -143,7 +143,7 @@
         <p class="text-center d-flex justify-content-center">One core advantage of being our client is having access to our custom-built client portal, CLIENTIO. Through CLIENTIO, our clients can now access and monitor the progress of our work in real time. </p>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <div><a class="btn button" role="button" href="clientio.html">Visit now</a></div>
+                <div><a class="btn button" role="button" href="{{'admin'}}">Visit now</a></div>
             </div>
         </div>
     </div>
