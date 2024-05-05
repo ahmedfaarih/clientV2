@@ -36,3 +36,16 @@ Route::get('/publications', function() {
 })->name('publications');
 
 
+Route::get('appointment-bot', function() {
+    return view('appointment-bot');
+})->name('appointment-bot');
+
+Route::get('registration-business-bot', function() {
+    return view('registration-business-bot');
+})->name('registration-business-bot');
+
+Route::get('registration-tax-bot', function() {
+    return view('registration-tax-bot');
+})->name('registration-tax-bot');
+
+
