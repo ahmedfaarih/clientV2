@@ -62,6 +62,14 @@ class ClientCaseResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->modifyQueryUsing(function (Builder $query) { 
+                if (auth()->user()->hasRole('Super Admin')) { 
+                    return;
+                }
+                if (auth()->user()->hasRole('user')) { 
+                    return $query->where('user_id', auth()->id()); 
+                } 
+            })
             ->filters([
                 //
             ])
