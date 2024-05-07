@@ -6,7 +6,6 @@ use App\Filament\Resources\CaseUpdateResource\Pages;
 use App\Filament\Resources\CaseUpdateResource\RelationManagers;
 use App\Models\CaseUpdate;
 use App\Models\ClientCase;
-use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
@@ -38,8 +37,6 @@ class CaseUpdateResource extends Resource
 
     public static function table(Table $table): Table
     {
-        $user = auth()->user();
-        
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('clientCase.case_no')
@@ -58,14 +55,6 @@ class CaseUpdateResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->query(
-                CaseUpdate::query()
-               ->whereIn('client_case_id', function ($query) use ($user) {
-                   $query->select('id')
-                       ->from((new ClientCase())->getTable())
-                       ->where('user_id', $user->id);
-               })
-           )
             ->filters([
                 //
             ])
